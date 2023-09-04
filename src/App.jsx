@@ -10,6 +10,9 @@ function App() {
     <>
       <Navbar />
       <Header />
+      <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1>
       <img src={reactLogo} className="logo react" alt="React logo" />
       <img src={viteLogo} className="logo" alt="Vite logo" />
     </>
