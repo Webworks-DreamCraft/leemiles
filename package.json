@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "nuke": "rm -rf node_moules package-lock.json"
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "nuke": "rm -rf node_moules package-lock.json",
+    "nuke-w": "rmdir /s node_modules package-lock.json"
   },
   "dependencies": {
     "react": "^18.2.0",
