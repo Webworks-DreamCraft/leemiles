@@ -1,3 +1,19 @@
-.navbar-title-color {
-    color: var(--main-bg-color, 'blue');
-} 
+.headline {
+    font-family: var(--font-primary)
+}
+
+nav {
+    display: none;
+}
+
+nav li {
+    font-family: var(--font-alike);
+}
+
+/* media queries */
+
+@media screen and (min-width: 1200px) {
+    nav {
+        display: block;
+    }
+}

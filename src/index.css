@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Alike&family=UnifrakturCook:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alike&family=UnifrakturCook:wght@700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,6 +23,10 @@
   /* Colors */
   --main-bg-color: blue;
   --accent-color: black;
+
+  /* Google font variables */
+  --font-primary: 'UnifrakturCook';
+  --font-alike: 'Alike';
 }
 
 a {
@@ -37,6 +44,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: black;
 }
 
 h1 {
