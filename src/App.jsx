@@ -7,15 +7,17 @@ import Header from './components/Header/Header'
 function App() {
 
   return (
-    <>
+    <div className="container mx-auto">
       <Navbar />
       <Header />
       <h1 className="text-3xl font-bold underline">
-        Hello world!
+        Hello world!!!!!!===
       </h1>
+ 
       <img src={reactLogo} className="logo react" alt="React logo" />
       <img src={viteLogo} className="logo" alt="Vite logo" />
-    </>
+ 
+    </div>
   )
 }
 
