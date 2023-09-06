@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Alike&family=UnifrakturCook:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alike&family=UnifrakturCook:wght@700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,8 +6,6 @@
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -40,16 +37,21 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 2% 5.5% 2% 5.5%;
   min-width: 320px;
-  min-height: 100vh;
   background-color: black;
+  min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/*
+.title is to test anchor points and sticky nav
+*/
+
+.title {
+  font-family: var(--font-primary);
+  color: white;
+  font-size: 15vw;
+  text-align: center;
 }
 
 button {
