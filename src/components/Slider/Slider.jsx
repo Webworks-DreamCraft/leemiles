@@ -22,7 +22,7 @@ const Slider = () => {
         `https://graph.instagram.com/me/media?fields=media_url&access_token=${import.meta.env.VITE_LONG_TOKEN}`
       );
       const insta = await response.json();
-      console.log(insta);
+      setInstagramPics(insta.data);
     };
     fetchInstagram();
   }, []);
@@ -37,6 +37,13 @@ const Slider = () => {
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >
+      {instagramPics.map(photo => {
+        return (
+          <SwiperSlide>
+            <img src={photo.media_url} />
+          </SwiperSlide>
+        )
+      })}
       <SwiperSlide>
         <img src={ss1} />
       </SwiperSlide>
