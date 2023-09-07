@@ -49,8 +49,15 @@ body {
 .title {
   font-family: var(--font-primary);
   color: white;
-  font-size: 15vw;
+  font-size: 14vw;
   text-align: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 4px;
+}
+
+/* For all <h1> elements after the first one */
+.transparent {
+  opacity: 0.6;
 }
 
 button {
