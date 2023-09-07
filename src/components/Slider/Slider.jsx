@@ -19,7 +19,7 @@ const Slider = () => {
   useEffect(() => {
     const fetchInstagram = async () => {
       const response = await fetch(
-        `https://graph.instagram.com/me/media?fields=media_url&access_token=${import.meta.env.VITE_LONG_TOKEN}`
+        `https://graph.instagram.com/me/media?fields=media_url,media_type&access_token=${import.meta.env.VITE_LONG_TOKEN}`
       );
       const insta = await response.json();
       setInstagramPics(insta.data);
@@ -39,8 +39,8 @@ const Slider = () => {
     >
       {instagramPics.map(photo => {
         return (
-          <SwiperSlide>
-            <img src={photo.media_url} />
+          photo.media_type === "VIDEO" ? null : <SwiperSlide>
+            <img class='instaPhoto' src={photo.media_url} />
           </SwiperSlide>
         )
       })}
