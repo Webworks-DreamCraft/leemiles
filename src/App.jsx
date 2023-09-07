@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Header />
       <h1 className="text-3xl font-bold underline">
-        Hello world!!!!!!======
+        Hello world!!!!!!======this works
       </h1>g
  
       <img src={reactLogo} className="logo react" alt="React logo" />
