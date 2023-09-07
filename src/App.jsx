@@ -23,6 +23,7 @@ function App() {
       <h1 className="title" id="5">
         LEE MILES
       </h1>
+      <h1 className="title">LEE MILES</h1>
     </div>
   )
 }
