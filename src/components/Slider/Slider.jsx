@@ -11,6 +11,7 @@ import wojack from '../../assets/wojack.gif'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
+import './Slider.css';
 
 const Slider = () => {
   return (
