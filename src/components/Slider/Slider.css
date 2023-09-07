@@ -16,7 +16,7 @@
 
 .instaPhoto {
   object-fit:cover;
-  height: 420px;
-  min-width: 420px;
+  /* height: 420px; */
+  /* min-width: 420px; */
   /* width: 420px; */
 }

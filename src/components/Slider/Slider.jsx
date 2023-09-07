@@ -40,7 +40,7 @@ const Slider = () => {
       {instagramPics.map(photo => {
         return (
           photo.media_type === "VIDEO" ? null : <SwiperSlide>
-            <img class='instaPhoto' src={photo.media_url} />
+            <img class='w-16 md:w-32 instaPhoto' src={photo.media_url} />
           </SwiperSlide>
         )
       })}
