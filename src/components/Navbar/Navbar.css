@@ -1,3 +1,45 @@
-.navbar-title-color {
-    color: var(--main-bg-color, 'blue');
-} 
+.navbar-container {
+    height: 37px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.headline {
+    font-family: var(--font-primary);
+    font-size: 28px;
+}
+
+nav {
+    display: none;
+}
+
+nav li {
+    font-family: var(--font-alike);
+    font-size: 16px;
+    padding-left: 24px;
+}
+
+/* media queries */
+
+@media screen and (min-width: 1200px) {
+
+}
+
+@media screen and (min-width: 640px) {
+    nav {
+        display: block;
+    }
+
+    .navbar {
+        display: flex;
+    }
+
+    .navbar-container {
+        margin-bottom: 47px;
+        position: sticky;
+        top: 0;
+    }
+}

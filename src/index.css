@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Alike&family=UnifrakturCook:wght@700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -20,28 +24,33 @@
   /* Colors */
   --main-bg-color: blue;
   --accent-color: black;
+
+  /* Google font variables */
+  --font-primary: 'UnifrakturCook';
+  --font-alike: 'Alike';
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
 a:hover {
   color: #535bf2;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 2% 5.5% 2% 5.5%;
   min-width: 320px;
+  background-color: black;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/*
+.title class is here to test anchor points and sticky nav
+*/
+
+.title {
+  font-family: var(--font-primary);
+  color: white;
+  font-size: 15vw;
+  text-align: center;
 }
 
 button {
