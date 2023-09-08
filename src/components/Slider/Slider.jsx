@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
+import SwiperCore from 'swiper';
+
 import ss1 from "../../assets/ss1.png";
 import ss2 from "../../assets/ss2.png";
 import ss3 from "../../assets/ss3.png";
@@ -15,6 +17,8 @@ import "./Slider.css";
 
 const Slider = () => {
   const [instagramPics, setInstagramPics] = useState([]);
+
+  SwiperCore.use([Autoplay])
 
   useEffect(() => {
     const fetchInstagram = async () => {
@@ -33,7 +37,10 @@ const Slider = () => {
     <Swiper
       modules={[Navigation]}
       spaceBetween={50}
-      slidesPerView={3}
+      slidesPerView={"auto"}
+      autoplay={{
+        delay: 5000,
+      }}
       loop={true}
       navigation
       onSlideChange={() => console.log("slide change")}
@@ -49,22 +56,22 @@ const Slider = () => {
         );
       })}
       <SwiperSlide>
-        <img src={ss1} />
+        <img class="instaPhoto" src={ss1} />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={ss2} />
+        <img class="instaPhoto" src={ss2} />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={ss3} />
+        <img class="instaPhoto" src={ss3} />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={ss4} />
+        <img class="instaPhoto" src={ss4} />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={ss5} />
+        <img class="instaPhoto" src={ss5} />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={wojack} />
+        <img class="instaPhoto" src={wojack} />
       </SwiperSlide>
     </Swiper>
   );

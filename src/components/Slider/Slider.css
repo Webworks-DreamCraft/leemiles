@@ -27,7 +27,9 @@
 }
 
 .swiper-slide {
-  min-width: 30px;
+  min-width: 320px;
+  width: 100%;
+  flex-shrink: initial!important;
 }
 
 .swiper-wrapper {
