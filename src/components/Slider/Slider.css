@@ -16,7 +16,24 @@
 
 .instaPhoto {
   object-fit:cover;
-  /* height: 420px; */
-  /* min-width: 420px; */
-  /* width: 420px; */
+  width: 350px;
+  min-width: 350px;
+  min-height: 350px;
+  display: block;
 }
+
+.swiper-div {
+  height: 100%;
+}
+
+.swiper-slide {
+  min-width: 30px;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 350px;
+}
+
+
+  
