@@ -1,6 +1,6 @@
 .line-break {
     width: 286px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--accent-color);
     margin: 0 auto;
 }
 
@@ -9,7 +9,7 @@
     flex-direction: column;
     max-width: 857px;
     margin: 40px auto 70px auto;
-    color: white;
+    color: var(--accent-color);
     font-family: var(--font-alike);
     font-size: 16px;
     font-weight: 400;
@@ -23,6 +23,10 @@
 .arrow-container {
     display: flex;
     justify-content: flex-end;
+}
+
+.arrow-container svg:hover {
+    fill: var(--hover-color);
 }
 
 /* media queries */
