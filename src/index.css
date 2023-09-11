@@ -61,6 +61,14 @@ body {
   opacity: 0.6;
 }
 
+/* For line break divs in between components */
+
+.line-break {
+  width: 286px;
+  border-bottom: 1px solid var(--accent-color);
+  margin: 15px auto 0 auto;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
