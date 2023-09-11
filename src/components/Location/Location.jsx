@@ -14,7 +14,7 @@ const Location = () => {
 function Map() {
     return (
         <div id="location">
-            <h1 className="title">LOCATION</h1>
+            <h1 className="title transparent">LOCATION</h1>
             <div className="line-break"></div>
             <div className="location-info">
                 <p>SAVIOR TATTOO</p>
