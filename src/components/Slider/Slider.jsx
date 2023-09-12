@@ -1,39 +1,43 @@
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-import SwiperCore from 'swiper';
-
-import ss1 from "../../assets/ss1.png";
-import ss2 from "../../assets/ss2.png";
-import ss3 from "../../assets/ss3.png";
-import ss4 from "../../assets/ss4.png";
-import ss5 from "../../assets/ss5.png";
-import wojack from "../../assets/wojack.gif";
-
-// Import Swiper styles
+import SwiperCore from "swiper";
+import instagramLogo from "../../assets/instagram.svg"
 import "swiper/css";
 import "swiper/css/navigation";
 import "./Slider.css";
 
 const Slider = () => {
   const [instagramPics, setInstagramPics] = useState([]);
+  const backupPics = Array.from({ length: 5 }, (_, i) => {
+    return{media_url: `leemiles/src/assets/ss${i}.png`}
+  })
 
-  SwiperCore.use([Autoplay])
+  SwiperCore.use([Autoplay]);
 
   useEffect(() => {
     const fetchInstagram = async () => {
-      const response = await fetch(
-        `https://graph.instagram.com/me/media?fields=media_url,media_type&access_token=${
-          import.meta.env.VITE_LONG_TOKEN
-        }`
-      );
-      const insta = await response.json();
-      setInstagramPics(insta.data);
+      try {
+        const response = await fetch(
+          `https://graph.instagram.com/me/media?fields=media_url,media_type&access_token=${
+            import.meta.env.VITE_LONG_TOKEN
+          }`
+        );
+        const insta = await response.json();
+        insta.data.length > 0 ? 
+        setInstagramPics(insta.data)
+        : setInstagramPics(backupPics);
+      } catch (err) {
+        setInstagramPics(backupPics);
+      }
     };
     fetchInstagram();
+    console.log(backupPics)
   }, []);
 
   return (
+    <>
+    
     <Swiper
       modules={[Navigation]}
       spaceBetween={50}
@@ -46,34 +50,36 @@ const Slider = () => {
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      {instagramPics.map((photo) => {
+      {
+      instagramPics.length > 0 ? instagramPics.map((photo) => {
         return photo.media_type === "VIDEO" ? null : (
           <SwiperSlide>
             <div class="swiper-div">
+              <>
               <img class="instaPhoto" src={photo.media_url} />
+               </>
             </div>
           </SwiperSlide>
         );
-      })}
-      <SwiperSlide>
-        <img class="instaPhoto" src={ss1} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img class="instaPhoto" src={ss2} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img class="instaPhoto" src={ss3} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img class="instaPhoto" src={ss4} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img class="instaPhoto" src={ss5} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img class="instaPhoto" src={wojack} />
-      </SwiperSlide>
+      })
+      : backupPics.map(() => {
+        return(
+          <SwiperSlide>
+            <div class="swiper-div">
+              <div class="placeholderSquare transparent"></div>
+            </div>
+          </SwiperSlide>
+        )
+      })
+    }
     </Swiper>
+    <section id="bottom-margin">
+      <section className="follow-container">
+        <p className="text">Follow On Instagram</p>
+        <img className="logo" src={instagramLogo} />
+      </section>
+    </section>
+    </>
   );
 };
 
