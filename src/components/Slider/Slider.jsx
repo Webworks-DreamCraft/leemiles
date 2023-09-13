@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import SwiperCore from "swiper";
-import instagramLogo from "../../assets/instagram.svg"
+import instagramLogo from "../../assets/instagram.svg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./Slider.css";
@@ -10,8 +10,8 @@ import "./Slider.css";
 const Slider = () => {
   const [instagramPics, setInstagramPics] = useState([]);
   const backupPics = Array.from({ length: 5 }, (_, i) => {
-    return{media_url: `leemiles/src/assets/ss${i}.png`}
-  })
+    return { media_url: `leemiles/src/assets/ss${i}.png` };
+  });
 
   SwiperCore.use([Autoplay]);
 
@@ -24,61 +24,58 @@ const Slider = () => {
           }`
         );
         const insta = await response.json();
-        insta.data.length > 0 ? 
-        setInstagramPics(insta.data)
-        : setInstagramPics(backupPics);
+        insta.data.length > 0
+          ? setInstagramPics(insta.data)
+          : setInstagramPics(backupPics);
       } catch (err) {
         setInstagramPics(backupPics);
       }
     };
     fetchInstagram();
-    console.log(backupPics)
   }, []);
+
+  const instagramDisplay = instagramPics.map((photo, i) => {
+    return photo.media_type === "VIDEO" ? null : (
+      <SwiperSlide key={i}>
+        <div className="swiper-div">
+          <>
+            <img className="instaPhoto" src={photo.media_url} />
+          </>
+        </div>
+      </SwiperSlide>
+    );
+  });
+
+  const backupPicsDisplay = backupPics.map((_, i) => {
+    return (
+      <SwiperSlide key={i}>
+        <div className="swiper-div">
+          <div className="placeholderSquare"></div>
+        </div>
+      </SwiperSlide>
+    );
+  });
 
   return (
     <>
-    
-    <Swiper
-      modules={[Navigation]}
-      spaceBetween={50}
-      slidesPerView={"auto"}
-      autoplay={{
-        delay: 5000,
-      }}
-      loop={true}
-      navigation
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      {
-      instagramPics.length > 0 ? instagramPics.map((photo) => {
-        return photo.media_type === "VIDEO" ? null : (
-          <SwiperSlide>
-            <div class="swiper-div">
-              <>
-              <img class="instaPhoto" src={photo.media_url} />
-               </>
-            </div>
-          </SwiperSlide>
-        );
-      })
-      : backupPics.map(() => {
-        return(
-          <SwiperSlide>
-            <div class="swiper-div">
-              <div class="placeholderSquare transparent"></div>
-            </div>
-          </SwiperSlide>
-        )
-      })
-    }
-    </Swiper>
-    <section id="bottom-margin">
-      <section className="follow-container">
-        <p className="text">Follow On Instagram</p>
-        <img className="logo" src={instagramLogo} />
+      <Swiper
+        modules={[Navigation]}
+        spaceBetween={50}
+        slidesPerView={"auto"}
+        autoplay={{
+          delay: 5000,
+        }}
+        loop={true}
+        navigation
+      >
+        {instagramPics.length > 0 ? instagramDisplay : backupPicsDisplay}
+      </Swiper>
+      <section id="bottom-margin">
+        <section className="follow-container">
+          <p className="text">Follow On Instagram</p>
+          <img className="logo" src={instagramLogo} />
+        </section>
       </section>
-    </section>
     </>
   );
 };
