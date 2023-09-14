@@ -27,12 +27,6 @@ function App() {
         LEE MILES
       </h1>
       <h1 className="title">LEE MILES</h1>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!!!!!!======this works
-      </h1>g
- 
-      
- 
     </div>
   )
 }
