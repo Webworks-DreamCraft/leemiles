@@ -3,15 +3,22 @@ import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api"
 
 const Location = () => {
 
-    const { isLoaded } = useLoadScript({
+    const { isLoaded, loadError } = useLoadScript({
         googleMapsApiKey: import.meta.env.VITE_GOOGLE_API_KEY,
     });
+    
+    const googleMap = () => (
+        <GoogleMap
+            zoom={16} 
+            center={{ lat: 43.147299698314114, lng: -77.59530238916275 }}
+            mapContainerClassName="map-container"
+        >
+            <MarkerF position={{ lat: 43.147299698314114, lng: -77.59530238916275 }}/>
+        </GoogleMap>
+    )
 
-    if(!isLoaded) return <div><h1>Loading...</h1></div>
-    return <Map />
-}
-
-function Map() {
+    const hasError = loadError ? null : googleMap();
+    
     return (
         <div id="location">
             <h1 className="title transparent">LOCATION</h1>
@@ -23,13 +30,7 @@ function Map() {
                 <p className="vertical-line">|</p>
                 <p>+1-585-484-9771</p>
             </div>
-            <GoogleMap
-                zoom={16} 
-                center={{ lat: 43.147299698314114, lng: -77.59530238916275 }}
-                mapContainerClassName="map-container"
-            >
-                <MarkerF position={{ lat: 43.147299698314114, lng: -77.59530238916275 }}/>
-            </GoogleMap>
+            {!isLoaded ? "...loading" : hasError}
         </div>
     )
 }
