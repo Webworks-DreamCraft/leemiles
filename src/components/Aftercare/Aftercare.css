@@ -1,0 +1,82 @@
+.aftercare--container {
+  margin-bottom: 6rem;
+  box-sizing: border-box;
+}
+
+.aftercare--card {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.aftercare--info {
+  align-self: flex-end;
+}
+
+.aftercare--num {
+  color: var(--accent-color);
+  font-family: var(--font-primary);
+  font-size: 15vw;
+  font-weight: 700;
+  line-height: 150%;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  text-align: center;
+}
+
+.aftercare--title {
+  color: var(--accent-color);
+  font-family: "Alike", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.aftercare--p {
+  color: var(--accent-color);
+  font-family: "Alike", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+@media screen and (min-width: 660px) {
+  .aftercare--container {
+    margin-bottom: 8rem;
+  }
+  .aftercare--card {
+    display: flex;
+    height: 320px;
+    padding: 0 1rem;
+  }
+
+  .aftercare--info {
+    align-self: flex-end;
+    width: 90%;
+  }
+
+  .aftercare--num {
+    align-self: flex-start;
+    margin: 0 1.25rem 0 0;
+    width: 10%;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .aftercare--card {
+    height: 390px;
+  }
+
+  .aftercare--num {
+    font-size: 200px;
+    margin: 0 2.25rem 0 0;
+    width: 10%;
+  }
+
+  .aftercare--info {
+    width: 90%;
+  }
+
+  .aftercare--title {
+    font-size: 3rem;
+  }
+}
