@@ -1,4 +1,5 @@
 import "./Portfolio.css";
+import PhotoAlbum from "react-photo-album";
 
 const Portfolio = () => {
   return (
