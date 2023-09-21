@@ -2,7 +2,7 @@ import "./Aftercare.css";
 
 const Aftercare = () => {
   return (
-    <div className="aftercare--container">
+    <div className="aftercare--container" id="aftercare">
       <h1 className="title transparent">AFTERCARE</h1>
       <div className="line-break"></div>
       <div className="aftercare--card">
