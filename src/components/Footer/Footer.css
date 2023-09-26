@@ -1,0 +1,81 @@
+#footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer--left,
+.footer--right {
+  font-family: "Alike", sans-serif;
+  font-size: 0.7rem;
+}
+
+.footer--right {
+  text-align: right;
+  display: flex;
+  align-items: center;
+}
+
+.insta--logo {
+  height: 1.25rem;
+  margin-left: 1.25rem;
+}
+
+.savior--logo {
+  height: 35px;
+  margin: 0 0.5rem 0 1rem;
+  display: none;
+}
+.lm--logo {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+}
+
+.footer-left--logos {
+  margin-top: 0.5rem;
+  display: flex;
+}
+
+/* vertical line styles */
+
+.vl {
+  border-left: 1px solid var(--accent-color);
+  height: 80px;
+}
+
+@media screen and (min-width: 370px) {
+  .savior--logo {
+    display: block;
+  }
+
+  .vl {
+    margin-left: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 660px) {
+}
+
+@media screen and (min-width: 890px) {
+  #footer {
+    justify-content: space-around;
+  }
+  .footer--right,
+  .footer--left {
+    font-size: 1.25rem;
+  }
+  .footer--right {
+    text-align: left;
+  }
+  .savior--logo {
+    height: 90px;
+    margin-right: 20px;
+    display: block;
+  }
+  .vl {
+    height: 100px;
+    display: block;
+  }
+  .insta--logo {
+    height: 1.5rem;
+  }
+}

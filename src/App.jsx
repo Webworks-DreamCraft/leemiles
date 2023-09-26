@@ -3,6 +3,7 @@ import Slider from "./components/Slider/Slider";
 import Contact from "./components/Contact/Contact";
 import Location from "./components/Location/Location";
 import Aftercare from "./components/Aftercare/Aftercare";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Location />
       <Aftercare />
       <Contact />
+      <Footer />
     </div>
   );
 }
