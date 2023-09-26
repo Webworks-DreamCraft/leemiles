@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+ import { Navigation, Autoplay } from "swiper";
+
 import SwiperCore from "swiper";
 import instagramLogo from "../../assets/instagram.svg";
 import "swiper/css";
