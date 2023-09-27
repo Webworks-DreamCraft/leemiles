@@ -4,6 +4,7 @@ import Contact from "./components/Contact/Contact"
 import Location from "./components/Location/Location"
 import Header from "./components/Header/Header"
 import Aftercare from "./components/Aftercare/Aftercare";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Location />
       <Aftercare />
       <Contact />
+      <Footer />
     </div>
   );
 }
