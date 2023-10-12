@@ -28,7 +28,7 @@ const Location = () => {
                 <p className="vertical-line">|</p>
                 <p>439 MONROE AVE ROCHESTER, NY</p>
                 <p className="vertical-line">|</p>
-                <p>+1-585-484-9771</p>
+                <p>1-585-484-9771</p>
             </div>
             {!isLoaded ? "...loading" : hasError}
         </div>

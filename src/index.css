@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Alike&family=UnifrakturCook:wght@700&display=swap');
+@font-face {
+  font-family: 'Abanyaro';
+  font-style: normal;
+  src: local('Abanyaro'), 
+  url(/src/assets/Abanyaro.ttf) format('truetype');
+}
 
 @tailwind base;
 @tailwind components;
@@ -28,7 +34,7 @@ html {
   --hover-border: #646cff;
 
   /* Google font variables */
-  --font-primary: 'UnifrakturCook';
+  --font-primary: 'Abanyaro';
   --font-alike: 'Alike';
 }
 
@@ -51,8 +57,6 @@ body {
   color: var(--accent-color);
   font-size: 14vw;
   text-align: center;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 4px;
 }
 
 /* For all transparent <h1> elements after the first one */

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
- import { Navigation, Autoplay } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 
 import SwiperCore from "swiper";
 import instagramLogo from "../../assets/instagram.svg";
@@ -73,7 +73,9 @@ const Slider = () => {
       </Swiper>
       <section id="bottom-margin">
         <section className="follow-container">
-          <p className="text">Follow On Instagram</p>
+          <a href="https://www.instagram.com/leemilestattoo/" target="_blank">
+            <p className="text">Follow On Instagram</p>
+          </a>
           <img className="logo" src={instagramLogo} />
         </section>
       </section>

@@ -1,11 +1,11 @@
 .navbar-container {
-    height: 37px;
+    height: 57px;
     color: var(--accent-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--main-bg-color);
-    z-index: 1;
+    z-index: 1000;
 }
 
 .headline {

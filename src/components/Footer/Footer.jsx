@@ -7,7 +7,7 @@ export default function Footer() {
     <footer id="footer">
       <div className="footer--left">
         <p>Lee Miles</p>
-        <p>555-555-5555</p>
+        <p>1-585-484-9771</p>
         <p>LEE@LEEMILESTATTOO.COM</p>
         <div className="footer-left--logos">
           <a href="#">
@@ -33,7 +33,7 @@ export default function Footer() {
             439 MONROE AVE
             <br /> ROCHESTER, NY
           </p>
-          <p>+1-585-484-9771</p>
+          <p>1-585-484-9771</p>
         </div>
       </div>
     </footer>
