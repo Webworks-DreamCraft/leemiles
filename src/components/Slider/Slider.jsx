@@ -11,7 +11,7 @@ import "./Slider.css";
 const Slider = () => {
   const [instagramPics, setInstagramPics] = useState([]);
   const backupPics = Array.from({ length: 5 }, (_, i) => {
-    return { media_url: `./ss${i}.png` };
+    return { media_url: `./uploads/IMG${i}.jpg` };
   });
 
   SwiperCore.use([Autoplay]);

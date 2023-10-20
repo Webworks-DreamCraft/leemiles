@@ -18,17 +18,16 @@ const Portfolio = () => {
 
   useEffect(() => {
     const fetchPics = Array.from({ length: 6 }, (_, i) => {
-      return { key:`${i}`, src: `./uploads/IMG${i}.jpeg`, width: 1080, height: 1440 };
+      return { key:`${i}`, src: `./uploads/IMG${i}.jpg`, width: 1080, height: 1440 };
     });
     setPhotos(fetchPics)
-    console.log(fetchPics)
     setCount(6)
   }, []);
 
   const handleViewMore = () => {
     setHasMoreClick(false);
     const morePics = Array.from({ length: 6 }, (_, i) => {
-      return { key:`${i + count}`, src: `./uploads/IMG${i + count}.jpeg`, width: 1080, height: 1440 };
+      return { key:`${i + count}`, src: `./uploads/IMG${i + count}.jpg`, width: 1080, height: 1440 };
     });
     const combinationPhotos = [...photos, ...morePics]
     setPhotos(combinationPhotos);

@@ -122,7 +122,7 @@ const Aftercare = () => {
           <p>-</p>
         </div>
         <div className="aftercare--info-dos">
-          <p className="aftercare--title">Cleaning -</p>
+          <p className="aftercare--title">Showering -</p>
           <p className="aftercare--p">
             Showering is fine. however, please DO NOT soak your tattoo for at
             least 2 weeks This means no swimmina. baths or submerging your
