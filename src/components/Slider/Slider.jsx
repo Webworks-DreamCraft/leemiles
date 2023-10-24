@@ -21,7 +21,7 @@ const Slider = () => {
       try {
         const response = await fetch(
           `https://graph.instagram.com/me/media?fields=media_url,media_type&access_token=${
-            process.env.VITE_LONG_TOKEN
+            process.env.REACT_APP_LONG_TOKEN
           }`
         );
         const insta = await response.json();
