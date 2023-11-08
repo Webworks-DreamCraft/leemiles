@@ -5,7 +5,7 @@ import fetch from "node-fetch";
 import { schedule } from "@netlify/functions";
 require("dotenv").config();
 
-const refresh = schedule("0 0 1,5 * *", async () => {
+const handler = schedule("0 0 1,5 * *", async () => {
   try {
     const response = await fetch(
       `https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=${process.env.VITE_LONG_TOKEN}`
@@ -27,4 +27,4 @@ const refresh = schedule("0 0 1,5 * *", async () => {
   }
 });
 
-export { refresh };
+export { handler };
