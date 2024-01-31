@@ -6,10 +6,9 @@ const clientPromise = mongoClient.connect();
 
 const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
   try {
-    // const database = (await clientPromise).db('webworks');
-    // const collection = database.collection('tokens');
-    // const results = await collection.find({}).limit(10).toArray();
-    const results = 'this is wrkg'
+    const database = (await clientPromise).db('webworks');
+    const collection = database.collection('tokens');
+    const results = await collection.find({}).limit(10).toArray();
     const value = process.env.MY_IMPORTANT_VARIABLE;
     return {
       statusCode: 200,
