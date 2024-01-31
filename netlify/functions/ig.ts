@@ -1,8 +1,8 @@
 import type { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
 import { MongoClient } from "mongodb";
 
-// const mongoClient = new MongoClient(process.env.MONGODB_URI);
-// const clientPromise = mongoClient.connect();
+const mongoClient = new MongoClient(process.env.MONGODB_DATABASE);
+const clientPromise = mongoClient.connect();
 
 const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
   try {
