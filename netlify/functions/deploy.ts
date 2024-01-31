@@ -1,5 +1,3 @@
-// YOUR_BASE_DIRECTORY/netlify/functions/
-
 import type { Config } from "@netlify/functions"
 
 export default async (req: Request) => {
