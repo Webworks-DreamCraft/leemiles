@@ -8,9 +8,7 @@ const value = process.env.MY_IMPORTANT_VARIABLE;
 let cachedDb = null;
 
 async function getData() {
-  const client = new MongoClient(MONGODB_URI, {
-    useUnifiedTopology: true
-  });
+  const client = new MongoClient(MONGODB_URI);
 
   try {
     await client.connect();
