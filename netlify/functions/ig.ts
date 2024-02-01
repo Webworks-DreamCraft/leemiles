@@ -1,43 +1,32 @@
 import type { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
-import { MongoClient } from "mongodb";
-import fetch from 'node-fetch';
-
-const MONGODB_URI = process.env.MONGODB_DATABASE;
+import { MongoClient, ServerApiVersion } from "mongodb";
+const MONGO_HOST = process.env.MONGODB_DATABASE;
 const DB_NAME = 'webworks';
+const MONGODB_COLLECTION = 'tokens';
 const value = process.env.MY_IMPORTANT_VARIABLE;
-let cachedDb = null;
 
-async function getData() {
-  const client = new MongoClient(MONGODB_URI);
+export const mongoClient = new MongoClient(MONGO_HOST, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverApi: ServerApiVersion.v1,
+});
 
+const clientPromise = mongoClient.connect();
+
+const connectDB = async () => {
   try {
-    await client.connect();
-    const test = await client
-      .db('webworks')
-      .collection('tokens')
-      .find();
-
-      console.log(test)
-    return test;
-  } catch (err) {
-    console.log(err); // output to netlify function log
-  } finally {
-    await client.close();
-  }
-}
-
-exports.handler = async function(event, context) {
-  try {
-    const data = await getData();
+    const database = (await clientPromise).db(DB_NAME);
+    console.log("[db] Conectada con éxito", database);
+    const collection = database.collection(MONGODB_COLLECTION);
+    const results = await collection.find({}).toArray();
     return {
       statusCode: 200,
-      body: JSON.stringify(data)
+      body: JSON.stringify(results),
     };
   } catch (err) {
-    console.log(err); // output to netlify function log
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ msg: err.message }) 
-    };
+    console.error("[db] Error", MONGO_HOST, err);
+    return { statusCode: 500, body: err.toString() };
   }
 };
+
+export default connectDB;
