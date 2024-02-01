@@ -16,9 +16,10 @@ const clientPromise = mongoClient.connect();
 const connectDB = async () => {
   try {
     const database = (await clientPromise).db(DB_NAME);
-    console.log("[db] Conectada con éxito", database);
     const collection = database.collection(MONGODB_COLLECTION);
-    const results = await collection.find({}).toArray();
+    console.log("[db] Conectada con éxito", collection);
+
+    const results = await collection.find({}) || 'found nothing';
     return {
       statusCode: 200,
       body: JSON.stringify(results),
