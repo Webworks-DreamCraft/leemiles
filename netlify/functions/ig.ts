@@ -9,7 +9,6 @@ let cachedDb = null;
 
 async function getData() {
   const client = new MongoClient(MONGODB_URI, {
-    useNewUrlParser: true,
     useUnifiedTopology: true
   });
 
