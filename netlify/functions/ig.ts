@@ -16,6 +16,8 @@ async function getData() {
       .db('webworks')
       .collection('tokens')
       .find();
+
+      console.log(test)
     return test;
   } catch (err) {
     console.log(err); // output to netlify function log
@@ -29,7 +31,7 @@ exports.handler = async function(event, context) {
     const data = await getData();
     return {
       statusCode: 200,
-      body: JSON.stringify({ id: data._id })
+      body: JSON.stringify(data)
     };
   } catch (err) {
     console.log(err); // output to netlify function log
