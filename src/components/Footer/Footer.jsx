@@ -28,12 +28,12 @@ export default function Footer() {
           <img src={SaviorLogo} className="savior--logo"></img>
         </a>
         <div className="footer-right--info">
-          <p>SAVIOR TATTOO</p>
+          <p>LIKE YOU I WAS</p>
           <p>
-            439 MONROE AVE
-            <br /> ROCHESTER, NY
+            116 main st
+            <br /> GENESEO, NY
+            <br /> 14454
           </p>
-          <p>1-585-484-9771</p>
         </div>
       </div>
     </footer>
