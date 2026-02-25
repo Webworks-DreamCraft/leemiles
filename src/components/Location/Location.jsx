@@ -6,7 +6,7 @@ const Location = () => {
       <h1 className="title transparent">LOCATION</h1>
       <div className="line-break"></div>
       <div className="location-info">
-        <p>SAVIOR TATTOO</p>
+        <p>LIKE YOU I WAS</p>
         <p className="vertical-line">|</p>
         <p>116 MAIN ST GENESEO, NY 14454</p>
         <p className="vertical-line">|</p>

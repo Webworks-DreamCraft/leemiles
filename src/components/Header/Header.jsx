@@ -6,7 +6,7 @@ const Header = () => {
       <h1 className="title">LEE MILES</h1>
       <div className="line-break"></div>
       <div className="header-info">
-        <p>SAVIOR TATTOO</p>
+        <p>LIKE YOU I WAS</p>
         <p className="vertical-line">|</p>
         <p>1-585-245-8536</p>
         <p className="vertical-line">|</p>

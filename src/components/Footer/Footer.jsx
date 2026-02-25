@@ -27,7 +27,7 @@ export default function Footer() {
         <a
           href="http://saviortattoo.com/"
           target="_blank"
-          alt="Logo for the Savior Tattoo business"
+          alt="Logo for the LIKE YOU I WAS business"
           rel="noreferrer"
         >
           <img src={SaviorLogo} className="savior--logo"></img>
