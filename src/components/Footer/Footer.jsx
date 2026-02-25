@@ -7,13 +7,17 @@ export default function Footer() {
     <footer id="footer">
       <div className="footer--left">
         <p>Lee Miles</p>
-        <p>1-585-484-9771</p>
+        <p>1-585-245-8536</p>
         <p>LEE@LEEMILESTATTOO.COM</p>
         <div className="footer-left--logos">
           <a href="#">
             <p className="lm--logo">L.M.</p>
           </a>
-          <a href="https://www.instagram.com/leemilestattoo/" target="_blank">
+          <a
+            href="https://www.instagram.com/leemilestattoo/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={Insta} className="insta--logo" alt="Instagram logo"></img>
           </a>
         </div>
@@ -24,6 +28,7 @@ export default function Footer() {
           href="http://saviortattoo.com/"
           target="_blank"
           alt="Logo for the Savior Tattoo business"
+          rel="noreferrer"
         >
           <img src={SaviorLogo} className="savior--logo"></img>
         </a>
