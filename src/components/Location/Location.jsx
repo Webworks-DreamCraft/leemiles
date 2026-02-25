@@ -8,14 +8,14 @@ const Location = () => {
       <div className="location-info">
         <p>SAVIOR TATTOO</p>
         <p className="vertical-line">|</p>
-        <p>439 MONROE AVE ROCHESTER, NY</p>
+        <p>116 MAIN ST GENESEO, NY 14454</p>
         <p className="vertical-line">|</p>
         <p>1-585-245-8536</p>
       </div>
       <div className="map-container">
         <iframe
           className="map-responsive"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2910.969303991849!2d-77.59769292305246!3d43.147173871130576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d6b5135caa947f%3A0x2f7585b4012e1124!2sSavior%20Tattoo!5e0!3m2!1sen!2sus!4v1697911224070!5m2!1sen!2sus"
+          src="https://maps.google.com/maps?q=116+Main+St,+Geneseo,+NY+14454&t=&z=15&ie=UTF8&iwloc=&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}
