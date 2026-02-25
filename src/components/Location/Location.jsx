@@ -10,7 +10,7 @@ const Location = () => {
         <p className="vertical-line">|</p>
         <p>439 MONROE AVE ROCHESTER, NY</p>
         <p className="vertical-line">|</p>
-        <p>1-1-585-245-8536</p>
+        <p>1-585-245-8536</p>
       </div>
       <div className="map-container">
         <iframe

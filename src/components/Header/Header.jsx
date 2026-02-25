@@ -8,7 +8,7 @@ const Header = () => {
       <div className="header-info">
         <p>SAVIOR TATTOO</p>
         <p className="vertical-line">|</p>
-        <p>1-1-585-245-8536</p>
+        <p>1-585-245-8536</p>
         <p className="vertical-line">|</p>
         <p>lee@leemilestattoo.com</p>
       </div>
